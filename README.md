@@ -3,7 +3,7 @@
 ### This is a basE91 encoder and decoder! Install it by following the instructions below!
 ### Auto install:
 ```bash
-curl -fsSL https://raw.githubusercontent.com/c00lkiddpostshaxxs/base91/main/install.sh -o install.sh && bash install.sh
+curl -fsSL https://raw.githubusercontent.com/c00lkiddpostshaxxs/base91/main/install.sh | bash
 ```
 ### Manual install:
 **For Linux:**   
