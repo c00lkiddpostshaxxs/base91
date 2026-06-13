@@ -44,6 +44,7 @@ gcc --version
 ```bash
 clang -O2 base91.c -o base91
 ```
+***(Move on to Step 3)***
 *If it pops up a window asking you to install **"command line developer tools",** it means you have no compiler installed at all. Install it with the instructions below:*   
 Check if Homebrew is installed on your Mac:
 ```bash
