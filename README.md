@@ -3,7 +3,7 @@
 ### This is a basE91 encoder and decoder! Install it by following the instructions below!
 ### Auto install:
 ```bash
-curl -fsSL https://github.com/c00lkiddpostshaxxs/base91/releases/download/v1/install.sh -o install.sh && bash install.sh
+curl -fsSL https://raw.githubusercontent.com/c00lkiddpostshaxxs/base91/main/install.sh -o install.sh && bash install.sh
 ```
 ### Manual install:
 **For Linux:**   
@@ -17,7 +17,7 @@ If you get a path *(e.g., /usr/bin/gcc)*, it is installed. *If you get an **erro
 ```
 Step 2: Install the C file:
 ```bash
-curl -fsSL 'https://github.com/c00lkiddpostshaxxs/base91/releases/download/v1/base91.c' -o base91.c
+curl -fsSL 'https://raw.githubusercontent.com/c00lkiddpostshaxxs/base91/main/base91.c' -o base91.c
 ```
 Step 3: Compile it:
 ```bash
@@ -61,7 +61,7 @@ brew install gcc
 ```
 Step 2: Install the C file:
 ```bash
-curl -fsSL 'https://github.com/c00lkiddpostshaxxs/base91/releases/download/v1/base91.c' -o base91.c
+curl -fsSL 'https://raw.githubusercontent.com/c00lkiddpostshaxxs/base91/main/base91.c' -o base91.c
 ```
 Step 3: Compile it:
 ```bash
