@@ -25,7 +25,7 @@ fi
 # --- 2. Download and Compile (WITH SAFETY BRAKES) ---
 echo "Downloading basE91..."
 # If curl fails, print error and exit immediately
-curl -fSL 'https://raw.githubusercontent.com/c00lkiddpostshaxxs/base91/main/base91.c' -o base91.c || { echo "Error: Failed to download base91.c! Check your GitHub URL."; exit 1; }
+curl -sSfL 'https://raw.githubusercontent.com/c00lkiddpostshaxxs/base91/main/base91.c' -o base91.c || { echo "Error: Failed to download base91.c! Check your GitHub URL."; exit 1; }
 
 echo "Compiling..."
 # If gcc fails, print error, clean up, and exit immediately
