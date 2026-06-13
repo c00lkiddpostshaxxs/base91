@@ -32,7 +32,7 @@ echo 'Hello, World!' | base91
 ```
 *If fail, try:*
 ```bash
-echo 'Hello, World!' | ~/Downloads/base91
+echo 'Hello, World!' | ./base91
 ```
 **For macOS:**
 Step 1: Check if gcc is installed:
@@ -76,5 +76,5 @@ echo 'Hello, World!' | base91
 ```
 *If fail, try:*
 ```bash
-echo 'Hello, World!' | ~/Downloads/base91
+echo 'Hello, World!' | ./base91
 ```
