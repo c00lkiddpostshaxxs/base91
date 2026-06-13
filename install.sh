@@ -22,16 +22,20 @@ if ! command -v gcc &> /dev/null; then
     fi
 fi
 
-# --- 2. Download and Compile ---
+# --- 2. Download and Compile (WITH SAFETY BRAKES) ---
 echo "Downloading basE91..."
-curl -fsSL 'https://raw.githubusercontent.com/c00lkiddpostshaxxs/base91/main/base91.c' -o base91.c
+# If curl fails, print error and exit immediately
+curl -fSL 'https://raw.githubusercontent.com/c00lkiddpostshaxxs/base91/main/base91.c' -o base91.c || { echo "Error: Failed to download base91.c! Check your GitHub URL."; exit 1; }
+
 echo "Compiling..."
-gcc -O2 base91.c -o base91
+# If gcc fails, print error, clean up, and exit immediately
+gcc -O2 base91.c -o base91 || { echo "Error: Compilation failed!"; rm -f base91.c; exit 1; }
+
 rm base91.c
 
 # --- 3. Optional Install ---
 echo "--------------------------------------------------------"
-echo "Installation complete."
+echo "Compilation complete."
 echo -n "Move to /usr/local/bin/ system-wide? (Requires password) [y/n]: "
 read -r response
 
