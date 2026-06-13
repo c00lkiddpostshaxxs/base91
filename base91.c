@@ -56,14 +56,13 @@ int decode_base91(FILE *in, FILE *out) {
     int n = 0, v = -1, ch;
     size_t buf_cap = 4096, buf_len = 0;
     unsigned char *buf = malloc(buf_cap);
-
+    
     init_decode_table();
-
     while ((ch = fgetc(in)) != EOF) {
         if (decode_table[ch] == 255) {
             if (ch == '\n' || ch == '\r') continue;
             free(buf);
-            fprintf(stderr, "basE91: Invalid character in input stream.\n");
+            fprintf(stderr, "Invalid character in input stream.\n");
             return 1;
         }
         int c = decode_table[ch];
@@ -80,6 +79,14 @@ int decode_base91(FILE *in, FILE *out) {
             v = -1;
         }
     }
+    
+    // --- NEW: Flush the final remaining byte into the buffer ---
+    if (v + 1) {
+        if (buf_len >= buf_cap) buf = realloc(buf, buf_cap *= 2);
+        buf[buf_len++] = (unsigned char)((b | (unsigned long)v << n) & 255);
+    }
+    // -----------------------------------------------------------
+
     fwrite(buf, 1, buf_len, out);
     free(buf);
     return 0;
