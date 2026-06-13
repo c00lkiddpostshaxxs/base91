@@ -1,3 +1,4 @@
+![License](https://img.shields.io/github/license/c00lkiddpostshaxxs/base91)
 # basE91
 ### This is a basE91 encoder and decoder! Install it by following the instructions below!
 ### Auto install:
