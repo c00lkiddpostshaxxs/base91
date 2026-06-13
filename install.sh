@@ -24,7 +24,7 @@ fi
 
 # --- 2. Download and Compile ---
 echo "Downloading basE91..."
-curl -fsSL 'https://github.com/c00lkiddpostshaxxs/base91/releases/download/v1/base91.c' -o base91.c
+curl -fsSL 'https://raw.githubusercontent.com/c00lkiddpostshaxxs/base91/main/base91.c' -o base91.c
 echo "Compiling..."
 gcc -O2 base91.c -o base91
 rm base91.c
